@@ -1,22 +1,28 @@
-*, *::before, *::after {
+@import url('https://fonts.cdnfonts.com/css/norse');
+
+:root{
+  --font-family:'DM Sans', sans-serif;
+  --font-logo: 'Norse', sans-serif;
+}
+*{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-family: 'DM Sans', sans-serif;
+  font-family: var(--font-family);
   height: 100vh;
 }
 
 .sidebar-panel {
   display: flex;
   height: 100vh;
+ 
 }
 
-/* ── LEFT PANEL ── */
 .left-panel {
-  background-image: url("Images_SignUp/bg-image-left.jpg");
+  background-image: url("Images/sidebar-bg.jpg");
   background-size: cover;
   background-position: center;
   width: 38%;
@@ -29,43 +35,45 @@ body {
 }
 
 .logo {
- display: flex;
+  display: flex;
   align-items: center;
+  justify-content: center;  /* Added this */
   gap: 10px;
   color: white;
-  
   background-color: rgba(0, 0, 0, 0.45);
   padding: 14px 24px;
   border-radius: 4px;
-  align-self: flex-start; 
- 
-  width: 450px;
-}
+  width: 109%;
+  margin: 0 -30px;
+  margin-top: 10px;}
 
 .logo-icon {
-    display: flex;
-    justify-content: center;
-width: 52px;
+width: 80px;
 }
 
 .logo-text {
-  font-family: 'Cinzel', serif;
-  font-size: 2rem;
+  font-family: var(--font-logo);
+  font-size: 5rem;
   font-weight: 700;
   letter-spacing: 4px;
 }
 
 .photo-credit {
+
   color: rgba(255,255,255,0.75);
   font-size: 0.75rem;
+  display: flex;
+  text-align: center;
+  justify-content: center;
 }
 
 .photo-credit a {
+  margin-left: 5px;
   color: rgba(255,255,255,0.9);
   text-decoration: underline;
 }
 
-/* ── RIGHT PANEL ── */
+
 .right-panel {
   flex: 1;
   display: flex;
@@ -74,7 +82,6 @@ width: 52px;
   overflow-y: auto;
 }
 
-/* ── HEADLINE ── */
 .headline {
   padding: 50px 60px 30px;
   display: flex;
@@ -88,9 +95,9 @@ width: 52px;
   line-height: 1.6;
   color: #111;
   max-width: 600px;
+ 
 }
-
-/* ── FORM SECTION ── */
+/*form*/
 .sub-headline {
   padding: 40px 60px;
   display: flex;
@@ -109,14 +116,15 @@ width: 52px;
 .form-row {
   display: flex;
   flex-direction: row;
-  gap: 30px;
+  gap: 20px;
 }
 
 .inner-form {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 15px;
   flex: 1;
+  margin-top: 10px;
 }
 
 .inner-form label {
@@ -149,7 +157,7 @@ input:invalid {
   box-shadow: 0 0 0 2px rgba(229,62,62,0.15);
 }
 
-/* ── BUTTON ── */
+/*button*/
 .button-foot {
 
   padding: 30px 5px 40px;
