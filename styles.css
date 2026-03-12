@@ -116,17 +116,25 @@ width: 80px;
 .form-row {
   display: flex;
   flex-direction: row;
-  gap: 20px;
+    gap: 15px;  /* Changed from 30px to 15px */
 }
 
 .inner-form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 14px;
   flex: 1;
   margin-top: 10px;
 }
 
+.inner-form1{
+    display: flex;
+  flex-direction: column;
+  gap: 14px;
+  flex: 1;
+  margin-top: 10px;
+  margin-right: 300px;
+}
 .inner-form label {
   font-size: 0.7rem;
   font-weight: 600;
@@ -135,21 +143,31 @@ width: 80px;
   text-transform: uppercase;
 }
 
+
+.inner-form1 label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #555;
+  text-transform: uppercase;
+}
+
 input {
-  width: 100%;
+  width: 90%;
   height: 42px;
   border: 1px solid #d1d5db;
   border-radius: 6px;
-  padding: 0 12px;
+  padding: 0 5px;
   font-size: 0.95rem;
   background-color: white;
   transition: border-color 0.2s;
 }
 
 input:focus {
-  outline: none;
-  border-color: #4a7c59;
-  box-shadow: 0 0 0 2px rgba(74,124,89,0.15);
+   background-color: rgb(226, 226, 215); /* Change background color */
+  border-color: blue;            /* Change border color */
+  color: black;                    /* Change text color */
+  outline: none;  
 }
 
 input:invalid {
